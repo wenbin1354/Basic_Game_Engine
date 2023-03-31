@@ -1,0 +1,17 @@
+x64/
+x64/Debug
+x64
+.vs/
+.vs/Engine_Game
+.vs
+.vscode/
+.vscode
+Debug/
+Release/
+ArchiveEngine/Debug
+ArchiveEngine/Release
+ArchiveEngine/x64
+Engine_Game/Debug
+Engine_Game/Release
+Engine_Game/x64
+glfw_build/
