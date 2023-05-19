@@ -12,9 +12,7 @@ public:
 
 	virtual void OnUpdate() override
 	{
-		std::cout << "Gaming is running" << std::endl;
-		Archive::GameWindow::SwapBuffers();
-		Archive::GameWindow::PollEvents();
+		
 	}
 };
 

@@ -23,7 +23,7 @@ namespace Archive
 
 	void GameWindow::CreateWindow(int width, int height, std::string&& windowName)
 	{
-		mInstance->mImplementation->CreateWindow(width, height, windowName);
+		mInstance->mImplementation->CreateWindow(width, height, std::move(windowName));
 	}
 
 	void GameWindow::SwapBuffers()
