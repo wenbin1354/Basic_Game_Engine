@@ -41,11 +41,15 @@ namespace Archive
 
 	int GLFWImplementation::GetWidth() const
 	{
-		return 0;
+		int width{ 0 }, height{ 0 };
+		glfwGetWindowSize(mWindow, &width, &height);
+		return width;
 	}
 
 	int GLFWImplementation::GetHeight() const
 	{
-		return 0;
+		int width{ 0 }, height{ 0 };
+		glfwGetWindowSize(mWindow, &width, &height);
+		return height;
 	}
 }

@@ -18,3 +18,14 @@ int main() {\
 	game.Run();\
 	return 0;\
 }
+
+#if ARCHIVE_DEBUG == 2
+	#define ARCHIVE_LOG(x) std::cout << "Log: " << x << std::endl;
+	#define ARCHIVE_ERROR(x) std::cerr << "ERROR: " << x << std::endl;
+#elif ARCHIVE_DEBUG == 1
+	#define ARCHIVE_LOG(x)
+	#define ARCHIVE_ERROR(x) std::cerr << "ERROR: " << x << std::endl;
+#else
+	#define ARCHIVE_LOG(x)
+	#define ARCHIVE_ERROR(x)
+#endif
