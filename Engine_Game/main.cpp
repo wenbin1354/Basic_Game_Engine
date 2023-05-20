@@ -16,7 +16,9 @@ public:
 	{
 		renderer.Clear();
 		renderer.Draw(background, {0, 0});
-		renderer.Draw(coin, {100, 100, 100, 100}, {0, 0});
+		renderer.Draw(coin, {250, 250});
+		renderer.Draw(floor, {0, 0});
+		renderer.Draw(platform, {500, 200});
 
 		renderer.Draw(player);
 		renderer.Draw(player2);
@@ -37,16 +39,21 @@ public:
 
 		if (isJumping)
 		{
-			player.UpdateYCoord(jumpVelocity); // Apply the current jump velocity
-			jumpVelocity -= gravity;		   // Decrease the jump velocity due to gravity
+			jump();
+		}
+	}
 
-			// Check if the player on ground level
-			if (player.GetCoords().yCoord <= groundLevel)
-			{
-				isJumping = false;
-				jumpVelocity = 0;											// Reset the jump velocity
-				player.SetCoords({player.GetCoords().xCoord, groundLevel}); // Snap the player to the ground level
-			}
+	void jump()
+	{
+		player.UpdateYCoord(jumpVelocity); // Apply the current jump velocity
+		jumpVelocity -= gravity;		   // Decrease the jump velocity due to gravity
+
+		// Check if the player on ground level
+		if (player.GetCoords().yCoord <= groundLevel)
+		{
+			isJumping = false;
+			jumpVelocity = 0;											// Reset the jump velocity
+			player.SetCoords({player.GetCoords().xCoord, groundLevel}); // Snap the player to the ground level
 		}
 	}
 
@@ -88,7 +95,9 @@ private:
 
 	Archive::Image background{"../Assets/Images/background.png"};
 	Archive::Image coin{"../Assets/Images/coin.png"};
-	Archive::Unit player{"../Assets/Images/arona.png", {100, 100}};
+	Archive::Image floor{"../Assets/Images/floor.png"};
+	Archive::Image platform{"../Assets/Images/platform.png"};
+	Archive::Unit player{"../Assets/Images/player.png", {100, 100}};
 	Archive::Unit player2{"../Assets/Images/arona.png", {400, 100}};
 
 	bool isRightPressed{false};
@@ -96,7 +105,7 @@ private:
 
 	bool isJumping{false};
 	int jumpVelocity{0};
-	const int initialJumpVelocity{10};
+	const int initialJumpVelocity{15};
 	const int gravity{1};
 	const int groundLevel{100};
 };
