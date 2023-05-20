@@ -8,8 +8,7 @@ namespace Archive
 
         virtual int GetWidth() const = 0;
         virtual int GetHeight() const = 0;
-
-        virtual void Activate() = 0;
+        virtual void Activate() const = 0;
 
     private:
     

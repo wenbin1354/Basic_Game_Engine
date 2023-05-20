@@ -14,8 +14,7 @@ namespace Archive
 
         virtual int GetWidth() const override;
         virtual int GetHeight() const override;
-
-        virtual void Activate() override;
+        virtual void Activate() const override;
 
     private:
         int mWidth;

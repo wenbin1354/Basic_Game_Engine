@@ -14,8 +14,7 @@ namespace Archive
 
 		int GetWidth() const;
 		int GetHeight() const;
-
-		void Activate();
+		void Activate() const;
 
 	private:
 		std::unique_ptr<ImplImage> mImplementation;

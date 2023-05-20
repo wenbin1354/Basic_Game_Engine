@@ -3,6 +3,7 @@
 #include "pch.h"
 #include "ArchiveUtil.h"
 #include "WindowImplementation.h"
+#include "ArchiveEvents.h"
 
 namespace Archive
 {
@@ -21,6 +22,10 @@ namespace Archive
 		static int GetHeight();
 
 		~GameWindow();
+
+		void SetKeyPressedCallback(std::function<void(const KeyPressed&)> callbackFunc);
+		void SetKeyReleasedCallback(std::function<void(const KeyReleased&)> callbackFunc);
+		void SetWindowCloseCallback(std::function<void()> callbackFunc);
 
 	private:
 		GameWindow();
