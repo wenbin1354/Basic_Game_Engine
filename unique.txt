@@ -9,4 +9,4 @@ Able to jump with W/Up Arrow/Space onto platforms and collect coins. Platform go
 Added game states Start, Playing, Game Over
 
 The goal of the game is to collect as much coins and reach the goal.
-Allow to restart the game after game over with randomize positions of coins and platform.
+Allow to restart the game after game over with randomize positions of coins.
