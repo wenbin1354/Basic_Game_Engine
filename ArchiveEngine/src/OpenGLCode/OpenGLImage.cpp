@@ -27,7 +27,7 @@ namespace Archive
         }
 
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, mWidth, mHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
-
+        glGenerateMipmap(GL_TEXTURE_2D);
         stbi_image_free(data);
     }
 
@@ -52,7 +52,6 @@ namespace Archive
         }
 
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, mWidth, mHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
-
         stbi_image_free(data);
     }
 
@@ -71,8 +70,9 @@ namespace Archive
         return mHeight;
     };
 
-    void OpenGLImage::Activate()
+    void OpenGLImage::Activate() const
     {
+        glBindTexture(GL_TEXTURE_2D, mTexture);
         glGenerateMipmap(GL_TEXTURE_2D);
     };
 }

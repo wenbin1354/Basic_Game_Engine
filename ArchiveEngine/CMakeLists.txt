@@ -14,6 +14,10 @@ set(HEADER_FILES
 	src/Image.h
 	src/ImplImage.h
 	src/OpenGLCode/OpenGLImage.h
+	src/Unit.h
+	src/RendererTypes.h
+	src/ArchiveEvents.h
+	src/ArchiveKeys.h
 )
 
 set(SOURCE_FILES
@@ -26,6 +30,8 @@ set(SOURCE_FILES
 	src/OpenGLCode/OpenGLShader.cpp
 	src/Image.cpp
 	src/OpenGLCode/OpenGLImage.cpp
+	src/Unit.cpp
+	src/ArchiveEvents.cpp
 )
 
 add_library(ArchiveEngine SHARED ${HEADER_FILES} ${SOURCE_FILES})

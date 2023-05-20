@@ -32,8 +32,9 @@ namespace Archive
         return mImplementation->GetHeight();
     }
 
-    void Image::Activate()
+    void Image::Activate() const
     {
         mImplementation->Activate();
     }
+
 }

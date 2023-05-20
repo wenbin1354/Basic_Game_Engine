@@ -45,6 +45,12 @@
     <ClCompile Include="src\OpenGLCode\OpenGlRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\ArchiveEvents.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Unit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ArchiveUtil.h">
@@ -96,6 +102,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\RendererTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ArchiveEvents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ArchiveKeys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Unit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
