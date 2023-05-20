@@ -1,0 +1,12 @@
+WenBin Lin
+wenbin.lin71@myhunter.cuny.edu
+CSCI 39541
+
+Added Player, Platform, Coin classes that inherit from Unit class.
+
+Made a game where player about able to move around with WASD/Arrow keys.
+Able to jump with W/Up Arrow/Space onto platforms and collect coins. Platform got its own unique collision detection.
+Added game states Start, Playing, Game Over
+
+The goal of the game is to collect as much coins and reach the goal.
+Allow to restart the game after game over with randomize positions of coins and platform.
