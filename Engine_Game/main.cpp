@@ -77,7 +77,7 @@ public:
 			if(isResetPressed)
 			{
 				isResetPressed = false;
-				RandomizePosition();
+				ChangeGameState(GameState::Start);
 			}
 		}
 
