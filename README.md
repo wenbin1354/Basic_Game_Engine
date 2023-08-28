@@ -1,2 +1,2 @@
 ﻿# ArchiveEngine
- A work in progress game engine for csci-39541
+A really basic game engine written in C++ using OpenGL, a sample game is attached
